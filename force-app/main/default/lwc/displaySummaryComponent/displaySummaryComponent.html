@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Summary">
+        <lightning-button slot="actions" label="Get Summary" onclick={getData}></lightning-button>
+        <lightning-textarea style="padding:10px;" label="Issue" onchange={changeVal}></lightning-textarea>
+        
+        <template if:true={responseInfo}>
+            <div>
+                <p>Response:</p>
+                <p>{responseInfo}</p>
+            </div>
+            
+        </template>
+    </lightning-card>
+    <lightning-card title="Generate Image">
+        <lightning-button slot="actions" label="Create Image" onclick={generate}></lightning-button>
+        <lightning-textarea style="padding:10px;" label="Issue" onchange={changeValImage}></lightning-textarea>
+        
+        <template if:true={responseImage}>
+            <div>
+                <iframe src={responseImage} height="1024px" width="100%"></iframe>
+            </div>
+            
+        </template>
+    </lightning-card>
+</template>
