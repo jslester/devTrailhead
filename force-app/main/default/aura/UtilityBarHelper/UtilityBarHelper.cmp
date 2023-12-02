@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="RetrieveMessageSentiment">
+  <lightning:conversationToolkitAPI aura:id="conversationKit" />
+  <lightning:omniToolkitAPI aura:id="omniToolkit" />
+  <aura:handler event="lightning:conversationNewMessage" action="{!c.onNewMessage}" />
+</aura:component>
